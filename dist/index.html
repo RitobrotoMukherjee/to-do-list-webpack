@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <title>To Do List</title>
+<script defer src="build.js"></script></head>
+
+<body>
+    <main>
+        <section id="list-card">
+            <div class="card-items">
+                <h1 class="title">Today's To Do</h1>
+            </div>
+            <div class="card-items add-task">
+                <input type="text" placeholder="Add To Your List">
+                <i class="far fa-plus-square"></i>
+            </div>
+            <div class="card-items">
+                <ul class="todo-list">
+                    <li class="todo-list-items">
+                        <div class="chekbox">
+                            <input type="checkbox" id="task1" name="checkbox" value="1">
+                            <label for="task1">Task 1</label>
+                        </div>
+                    </li>
+                    <li class="todo-list-items">
+                        <div class="chekbox">
+                            <input type="checkbox" id="task1" name="checkbox" value="1">
+                            <label for="task1">Task 1</label>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="card-items">
+                <button id="clear-completed-btn">Clear All Completed</button>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

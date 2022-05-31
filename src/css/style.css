@@ -1,0 +1,26 @@
+:root {
+    --font-family: sans-serif;
+    --main-bg: #f6f6f6;
+    --list-bg: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family);
+    background: var(--main-bg);
+}
+
+li {
+    list-style-type: none;
+}
+
+#list-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 660px;
+    background: var(--list-bg);
+    box-shadow: 0px 10px 15px rgb(0 0 0 / 10%);
+    margin: 60px auto;
+    padding: 15px;
+}
