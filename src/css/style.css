@@ -37,11 +37,57 @@ section {
   align-items: center;
   background: var(--list-bg);
   padding: 9px 3px;
-  border-bottom: 1px solid var(--grey);
   min-height: 30px;
+}
+
+.title-container {
+  border-bottom: 1px solid var(--grey);
+}
+
+.add-task {
+  border-bottom: 1px solid var(--grey);
+}
+
+#add-task-input {
+  height: 30px;
+  width: 90%;
+  border: none;
+  padding: 6px;
+  font-style: italic;
+}
+
+.add-icon {
+  cursor: pointer;
+  width: 10px;
+  margin-right: 9px;
+}
+
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 3px;
+}
+
+.todo-list-items {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--grey);
+  padding: 15px;
 }
 
 .button-container {
   padding: 9px 0;
   justify-content: center;
+}
+
+#clear-completed-btn {
+  cursor: pointer;
+  border: 1px solid var(--grey);
+  border-radius: 6px;
+  padding: 15px;
+  min-width: 20px;
+  font-weight: 600;
+  box-shadow: 3px 6px 9px 3px rgb(183, 183, 183);
 }

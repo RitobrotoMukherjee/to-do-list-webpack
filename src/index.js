@@ -11,9 +11,12 @@ const renderTasks = () => {
   let template = '';
   taskList.forEach((item) => {
     template += `<li class="todo-list-items">
-            <div class="chekbox">
+            <div class="list-item-data">
                 <input type="checkbox" id="task${item.index}" name="checkbox" value="${item.index}">
                 <label for="task${item.index}">Task ${item.index + 1}</label>
+            </div>
+            <div class="list-item-data">
+                <i id="delete${item.index}" class="fas fa-trash-alt"></i>
             </div>
         </li>`;
   });
