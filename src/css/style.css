@@ -77,6 +77,10 @@ section {
   padding: 15px;
 }
 
+.list-item-data {
+  cursor: pointer;
+}
+
 .button-container {
   padding: 9px 0;
   justify-content: center;
@@ -90,4 +94,8 @@ section {
   min-width: 20px;
   font-weight: 600;
   box-shadow: 3px 6px 9px 3px rgb(183, 183, 183);
+}
+
+#clear-completed-btn:active {
+  box-shadow: none;
 }
