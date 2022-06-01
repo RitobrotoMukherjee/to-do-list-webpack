@@ -31,6 +31,14 @@ section {
   border-radius: 4px;
 }
 
+.flex-2 {
+  flex: 2 1 90%;
+}
+
+.flex-1 {
+  flex: 1 1 auto;
+}
+
 .card-items {
   display: flex;
   justify-content: space-between;
@@ -73,8 +81,15 @@ section {
 .todo-list-items {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   border-bottom: 1px solid var(--grey);
   padding: 15px;
+}
+
+.edit-task {
+  border: none;
+  padding: 6px;
+  width: 90%;
 }
 
 .list-item-data {
