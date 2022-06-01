@@ -13,12 +13,15 @@
 <body>
     <main>
         <section id="list-card">
-            <div class="card-items title-container">
+            <div class="card-items separator">
                 <h1 class="title">Today's To Do</h1>
             </div>
-            <div class="card-items add-task">
+            <div class="card-items separator">
                 <input id="add-task-input" type="text" placeholder="Add To Your List...">
-                <i class="far fa-plus-square add-icon"></i>
+                <i id="add-task-icon" class="far fa-plus-square add-icon"></i>
+            </div>
+            <div id="error-container" class="card-items display-none">
+                <p class="error">Please Enter task description</p>
             </div>
             <div class="card-items">
                 <ul id="todo-list-container" class="todo-list">

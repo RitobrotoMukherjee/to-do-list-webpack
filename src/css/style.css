@@ -3,6 +3,7 @@
   --main-bg: #f6f6f6;
   --list-bg: #fff;
   --grey: #ccc;
+  --error: red;
 }
 
 * {
@@ -39,6 +40,16 @@ section {
   flex: 1 1 auto;
 }
 
+.display-none {
+  display: none;
+}
+
+.error {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--error);
+}
+
 .card-items {
   display: flex;
   justify-content: space-between;
@@ -48,12 +59,12 @@ section {
   min-height: 30px;
 }
 
-.title-container {
+.separator {
   border-bottom: 1px solid var(--grey);
 }
 
-.add-task {
-  border-bottom: 1px solid var(--grey);
+#error-container {
+  display: none;
 }
 
 #add-task-input {

@@ -1,10 +1,9 @@
 import './css/style.css';
+import './js/event-listeners/addRemove.js';
 
-import TaskList from './js/taskList.js';
-
-import ui from './js/ui.js';
+import createUI from './js/ui.js';
 
 const renderTasks = () => {
-  ui(TaskList.getList());
+  createUI();
 };
 renderTasks();
