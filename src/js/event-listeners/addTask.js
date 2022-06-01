@@ -12,14 +12,14 @@ const errorContainer = document.getElementById('error-container');
 const addTaskEventListner = (e) => {
   const task = addTaskInput.value;
   if(task === ''){
-    return errorContainer.style = 'display: none;';
+    return errorContainer.style = 'display: block;';
   }
   if(e.keyCode === 13 || e.target.id === 'add-task-icon'){
     crud.addTask(task);
     addTaskInput.value = '';
     createUI();
   }
-  return errorContainer.style = '';
+  return errorContainer.style = 'display: none;';
 }
 
 addTaskIcon.addEventListener('click', addTaskEventListner);

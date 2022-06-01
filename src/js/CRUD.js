@@ -9,6 +9,12 @@ export default class {
         return TaskList.setList(tasks);
     }
 
+    updateTask(id, desc) {
+        const tasks = TaskList.getList();
+        tasks[id].description = desc;
+        return TaskList.setList(tasks);
+    }
+
     removeTask(id) {
         const tasks = TaskList.getList();
         tasks.splice(id, 1);
