@@ -53,3 +53,4 @@ Give a ⭐️ if you like this project!
 ## Code Reviewers
 - Lydia Ingabire [@github](https://github.com/DeliceLydia)
 - Temitope Ogunleye [@github](https://github.com/topeogunleye)
+- George Magdy [@github](https://github.com/gemmen29)
