@@ -8,7 +8,7 @@ export default class extends TaskList {
 
   completedTask(listIndex = -1, completed = false) {
     this.tasks[listIndex].completed = completed;
-    return super.reOrderTaskIndex(this.tasks);
+    return super.setList(this.tasks);
   }
 
   completedMultipleTasks(tasks = []) {
