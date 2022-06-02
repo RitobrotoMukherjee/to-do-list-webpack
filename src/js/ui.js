@@ -11,7 +11,7 @@ export default function createUI() {
   items.forEach((item, i) => {
     template += `<li class="todo-list-items">
                   <div class="list-item-data flex-2">
-                      <input type="checkbox" id="task-check-${item.index}" name="checkbox" value="${item.index}">
+                      <input type="checkbox" id="task-check-${item.index}" data-id="${i}" name="checkbox" value="${item.index}">
                       <input type="text" id="task-edit-${item.index}" data-id="${i}" class="edit-task" value="${item.description}">
                   </div>
                   <div class="list-item-data flex-1">

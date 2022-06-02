@@ -1,5 +1,6 @@
 import Task from './task.js';
 import TaskList from './taskList.js';
+import { reOrderTasks } from './helpers/ReorderTaskIndex.js';
 
 export default class {
   static addTask(task) {
@@ -16,11 +17,9 @@ export default class {
   }
 
   static removeTask(id) {
-    const tasks = TaskList.getList();
+    let tasks = TaskList.getList();
     tasks.splice(id, 1);
-    for (let i = 0; i < tasks.length; i += 1) {
-      tasks[i].index = i + 1;
-    }
+    tasks = reOrderTasks(tasks);
     TaskList.setList(tasks);
     return tasks;
   }
