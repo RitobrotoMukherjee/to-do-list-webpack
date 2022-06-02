@@ -54,3 +54,4 @@ Give a ⭐️ if you like this project!
 - Lydia Ingabire [@github](https://github.com/DeliceLydia)
 - Temitope Ogunleye [@github](https://github.com/topeogunleye)
 - George Magdy [@github](https://github.com/gemmen29)
+- Eze Promise [@github](https://github.com/codepantha)
