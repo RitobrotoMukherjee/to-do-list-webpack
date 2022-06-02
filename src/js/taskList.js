@@ -11,7 +11,7 @@ export default class {
   }
 
   reOrderTaskIndex(tasks) {
-    tasks.forEach(({index}, i) => index = i + 1);
+    tasks.forEach((task, i) => task.index = i + 1);
     return this.setList(tasks);
   }
 }

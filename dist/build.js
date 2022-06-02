@@ -166,7 +166,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* eslint-disable */\n/* Main Class to set local storage */\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {\n  setList(tasks) {\n    return localStorage.setItem('tasks', JSON.stringify(tasks));\n  }\n\n  getList() {\n    return localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];\n  }\n\n  reOrderTaskIndex(tasks) {\n    tasks.forEach(({index}, i) => index = i + 1);\n    return this.setList(tasks);\n  }\n});\n\n//# sourceURL=webpack://to-do-list-webpack/./src/js/taskList.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* eslint-disable */\n/* Main Class to set local storage */\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (class {\n  setList(tasks) {\n    return localStorage.setItem('tasks', JSON.stringify(tasks));\n  }\n\n  getList() {\n    return localStorage.getItem('tasks') ? JSON.parse(localStorage.getItem('tasks')) : [];\n  }\n\n  reOrderTaskIndex(tasks) {\n    tasks.forEach((task, i) => task.index = i + 1);\n    return this.setList(tasks);\n  }\n});\n\n//# sourceURL=webpack://to-do-list-webpack/./src/js/taskList.js?");
 
 /***/ }),
 
