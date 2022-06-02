@@ -1,26 +1,27 @@
 import Task from './task.js';
 import TaskList from './taskList.js';
-import { reOrderTasks } from './helpers/ReorderTaskIndex.js';
 
-export default class {
-  static addTask(task) {
-    const tasks = TaskList.getList();
-    const l = tasks.length;
-    tasks.push(new Task((l + 1), false, task));
-    return TaskList.setList(tasks);
+export default class extends TaskList {
+  constructor() {
+    super();
+    this.tasks = super.getList();
   }
 
-  static updateTask(id, desc) {
-    const tasks = TaskList.getList();
-    tasks[id].description = desc;
-    return TaskList.setList(tasks);
+  addTask(task) {
+    const l = this.tasks.length;
+    this.tasks.push(new Task((l + 1), false, task));
+    super.setList(this.tasks);
+    return this.tasks;
   }
 
-  static removeTask(id) {
-    let tasks = TaskList.getList();
-    tasks.splice(id, 1);
-    tasks = reOrderTasks(tasks);
-    TaskList.setList(tasks);
-    return tasks;
+  updateTask(id, desc) {
+    this.tasks[id].description = desc;
+    super.setList(this.tasks);
+    return this.tasks;
+  }
+
+  removeTask(arrIdx) {
+    this.tasks.splice(arrIdx, 1);
+    return super.reOrderTaskIndex(this.tasks);
   }
 }

@@ -1,17 +1,16 @@
-import TaskList from './taskList.js';
 import CRUD from './CRUD.js';
+import CompletedTasks from './CompletedTasks.js';
 
-const docRange = document.createRange();
 const listContainer = document.getElementById('todo-list-container');
 
 export default function createUI() {
-  const items = TaskList.getList();
+  const crud = new CRUD();
   let template = '';
   listContainer.innerHTML = '';
-  items.forEach((item, i) => {
+  crud.tasks.forEach((item, i) => {
     template += `<li class="todo-list-items">
                   <div class="list-item-data flex-2">
-                      <input type="checkbox" id="task-check-${item.index}" data-id="${i}" name="checkbox" value="${item.index}">
+                      <input  class="complete-task" type="checkbox" id="task-check-${item.index}" data-id="${i}" ${item.completed === true ? 'checked' : ''} value="${item.index}">
                       <input type="text" id="task-edit-${item.index}" data-id="${i}" class="edit-task" value="${item.description}">
                   </div>
                   <div class="list-item-data flex-1">
@@ -19,14 +18,15 @@ export default function createUI() {
                   </div>
               </li>`;
   });
-  listContainer.append(docRange.createContextualFragment(template));
+  listContainer.innerHTML = template;
 
   const deleteButtons = document.querySelectorAll('.delete-task');
   const editFields = document.querySelectorAll('.edit-task');
+  const completed = document.querySelectorAll('.complete-task');
 
   deleteButtons.forEach((item) => {
     item.addEventListener('click', (ev) => {
-      CRUD.removeTask(ev.target.getAttribute('data-id'));
+      crud.removeTask(ev.target.getAttribute('data-id'));
       createUI();
     });
   });
@@ -39,7 +39,16 @@ export default function createUI() {
         createUI();
         return alert('Task Description Cannot Be Empty');
       }
-      CRUD.updateTask(id, desc);
+      crud.updateTask(id, desc);
+      return createUI();
+    });
+  });
+
+  completed.forEach((el) => {
+    const complete = new CompletedTasks();
+    el.addEventListener('change', (ev) => {
+      const id = ev.target.getAttribute('data-id');
+      complete.completedTask(id, ev.target.checked);
       return createUI();
     });
   });
