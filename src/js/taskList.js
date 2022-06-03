@@ -1,7 +1,7 @@
 /* eslint-disable */
 /* Main Class to set local storage */
 
-import Task from "./task";
+// import Task from "./task";
 
 export default class {
   setList(tasks) {
