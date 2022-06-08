@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1654717018106" clover="3.2.0">
+  <project timestamp="1654717018106" name="All files">
+    <metrics statements="18" coveredstatements="9" conditionals="5" coveredconditionals="0" methods="9" coveredmethods="3" elements="32" coveredelements="12" complexity="0" loc="18" ncloc="18" packages="1" files="3" classes="3"/>
+    <file name="CRUD.js" path="C:\Personal\microverse\moduleTwo\to-do-list-webpack\src\js\CRUD.js">
+      <metrics statements="11" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="stmt"/>
+      <line num="18" count="0" type="stmt"/>
+      <line num="19" count="0" type="stmt"/>
+      <line num="20" count="0" type="stmt"/>
+      <line num="24" count="0" type="stmt"/>
+      <line num="25" count="0" type="stmt"/>
+    </file>
+    <file name="task.js" path="C:\Personal\microverse\moduleTwo\to-do-list-webpack\src\js\task.js">
+      <metrics statements="3" coveredstatements="3" conditionals="3" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="stmt"/>
+    </file>
+    <file name="taskList.js" path="C:\Personal\microverse\moduleTwo\to-do-list-webpack\src\js\taskList.js">
+      <metrics statements="4" coveredstatements="0" conditionals="2" coveredconditionals="0" methods="4" coveredmethods="0"/>
+      <line num="6" count="0" type="stmt"/>
+      <line num="10" count="0" type="cond" truecount="0" falsecount="2"/>
+      <line num="14" count="0" type="stmt"/>
+      <line num="15" count="0" type="stmt"/>
+    </file>
+  </project>
+</coverage>
