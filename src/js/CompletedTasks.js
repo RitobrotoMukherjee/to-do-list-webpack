@@ -11,11 +11,8 @@ export default class extends TaskList {
     return super.setList(this.tasks);
   }
 
-  completedMultipleTasks(tasks = []) {
-    tasks.forEach((id) => {
-      const delIdx = this.tasks.findIndex(({ index }) => index === id + 1);
-      this.tasks.splice(delIdx, 1);
-    });
-    return super.reOrderTaskIndex(this.tasks);
+  completedMultipleTasks() {
+    const tasks = this.tasks.filter(({ completed }) => !completed);
+    return super.reOrderTaskIndex(tasks);
   }
 }

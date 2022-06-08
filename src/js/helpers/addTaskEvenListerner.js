@@ -27,11 +27,7 @@ const addTaskEventListner = (e) => {
 
 const clearAllCompleted = () => {
   const completedTsk = new CompletedTasks();
-  const markedCompleted = [...document.querySelectorAll('input[type="checkbox"].complete-task')];
-  const taskIndexes = markedCompleted
-    .filter(({ checked }) => checked)
-    .map(({ dataset }) => parseInt(dataset.id, 10));
-  completedTsk.completedMultipleTasks(taskIndexes);
+  completedTsk.completedMultipleTasks();
   createUI();
 };
 

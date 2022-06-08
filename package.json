@@ -11,7 +11,12 @@
     "type": "git",
     "url": "git+https://github.com/RitobrotoMukherjee/to-do-list-webpack.git"
   },
-  "keywords": ["webpack", "HTML5", "CSS3", "todo list"],
+  "keywords": [
+    "webpack",
+    "HTML5",
+    "CSS3",
+    "todo list"
+  ],
   "author": "",
   "license": "ISC",
   "bugs": {
