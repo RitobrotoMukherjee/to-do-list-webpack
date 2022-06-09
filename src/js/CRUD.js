@@ -22,6 +22,7 @@ export default class extends TaskList {
 
   removeTask(arrIdx) {
     this.tasks.splice(arrIdx, 1);
-    return super.reOrderTaskIndex(this.tasks);
+    super.reOrderTaskIndex(this.tasks);
+    return this.tasks;
   }
 }
