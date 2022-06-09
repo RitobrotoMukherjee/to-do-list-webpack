@@ -11,16 +11,12 @@ describe('add and delete 1-1 to-do item', () => {
     const toDoList = [];
     c.tasks = toDoList;
 
-    // mock the super setList function
-    const mockSetList = jest.fn((tasks) => toDoList = tasks);
-    const mockReOrderTaskIndex = jest.fn((tasks) => {
-        tasks.forEach((task, i) => task.index = i + 1);
-        return toDoList = tasks;
-    });
+    // mock the localStorage setList function
+    const mockSetList = jest.fn((tasks) => toDoList = JSON.stringify(tasks));
+    
     TaskList.mockImplementation(() => {
         return{
             setList: mockSetList,
-            reOrderTaskIndex: mockReOrderTaskIndex
         }
         
     });
