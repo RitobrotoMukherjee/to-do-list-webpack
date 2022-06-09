@@ -2,7 +2,7 @@
 
 # Project Name
 
-> This is a projec to track your daily tasks as a todo list. This project doesn't have a backend so data gets saved in you local storage.
+> This is a project to track your daily tasks as a todo list. This project doesn't have a backend so data gets saved in you local storage.
 
 
 ## Built With
@@ -26,6 +26,10 @@
 
 - Run ``` npm install ```
 
+## Extra configuration for testing
+
+- Run ``` npm test```
+
 ## Authors
 
 👤 **Ritobroto Mukherjee**
@@ -35,6 +39,11 @@
 - Twitter: [@RitobrotoM3](https://twitter.com/RitobrotoM3)
 - LinkedIn: [Ritobroto Mukherjee](https://www.linkedin.com/in/ritobroto-mukherjee-519148ba/)
 
+
+👤 **Divine Charlotte**
+
+- GitHub: [@divinecharlotte](https://github.com/divinecharlotte)
+-  LinkedIn: [Divine Charlotte](https://www.linkedin.com/in/charlotte-divine-dusenge-31b19017a/)
 
 ## 🤝 Contributing
 
