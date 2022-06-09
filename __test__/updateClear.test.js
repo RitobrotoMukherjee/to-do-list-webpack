@@ -11,7 +11,17 @@ let localStorage = [
     {
         index: 1,
         completed: false,
-        description: '',
+        description: 'task1',
+    },
+    {
+        index: 2,
+        completed: false,
+        description: 'task2',
+    },
+    {
+        index: 3,
+        completed: false,
+        description: 'task3',
     }
 ];
 
@@ -41,14 +51,14 @@ describe('Remove task and clear completed tests', () => {
     const mockSetList = jest.fn((tasks) => localStorage = tasks);
     TaskList.prototype.setList = mockSetList;
 
-    test('update task description test', () => {
+    test('update completed task ', () => {
         // Arrange
-        const description = "Added new description";
 
         // ACT
-        const updatedTask = cr.updateTask(0, description);
+       ct.completedTask(1,true)
 
         // Assert
-        expect(description).toBe(updatedTask[0].description);
+        expect(ct.tasks[1].completed).toBeTruthy()
+       
     })
 });
