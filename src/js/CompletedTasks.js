@@ -8,11 +8,13 @@ export default class extends TaskList {
 
   completedTask(listIndex = -1, completed = false) {
     this.tasks[listIndex].completed = completed;
-    return super.setList(this.tasks);
+    super.setList(this.tasks);
+    return this.tasks;
   }
 
   completedMultipleTasks() {
     const tasks = this.tasks.filter(({ completed }) => !completed);
-    return super.reOrderTaskIndex(tasks);
+    super.reOrderTaskIndex(tasks);
+    return this.tasks;
   }
 }
