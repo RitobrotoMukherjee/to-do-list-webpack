@@ -27,13 +27,13 @@ let localStorage = [
 
 describe('Update task test', () => {
     const cr =  new crud();
-    cr.tasks = localStorage;
-
+    
     const mockSetList = jest.fn((tasks) => localStorage = tasks);
     TaskList.prototype.setList = mockSetList;
 
     test('update task description test', () => {
         // Arrange
+        cr.tasks = localStorage;
         const description = "Added new description";
 
         // ACT
@@ -46,19 +46,49 @@ describe('Update task test', () => {
 
 describe('Remove task and clear completed tests', () => {
     const ct =  new CompletedTask();
-    ct.tasks = localStorage;
 
+    // mock set local storage
     const mockSetList = jest.fn((tasks) => localStorage = tasks);
-    TaskList.prototype.setList = mockSetList;
 
-    test('update completed task ', () => {
+    // mock reorder index function
+    const mockReOrderTaskIndex = jest.fn((tasks) => {
+        tasks.forEach((task, i) => task.index = i + 1 );
+        return localStorage = tasks;
+    });
+
+    TaskList.prototype.setList = mockSetList;
+    TaskList.prototype.reOrderTaskIndex = mockReOrderTaskIndex;
+
+    test('Update 1 completed task', () => {
         // Arrange
+        ct.tasks = localStorage;
 
         // ACT
-       ct.completedTask(1,true)
+        ct.completedTask(2,true);
 
         // Assert
-        expect(ct.tasks[1].completed).toBeTruthy()
+        expect(ct.tasks[2].completed).toBeTruthy();
        
-    })
+    });
+
+    test('Clear all completed tasks test', () => {
+        // Arrange
+        const checkTaskTwo = { index: 1, completed: false, description: 'task2' };
+
+        ct.tasks = localStorage.map((task) => {
+            if(task.index % 2 !== 0) {
+                task.completed = true;
+            }
+            return task;
+        });
+
+        // Act
+        const nonCompletedTask = ct.completedMultipleTasks();
+
+        // Assert
+        expect(ct.tasks).toHaveLength(3);
+        expect(nonCompletedTask).toHaveLength(1);
+        expect(nonCompletedTask[0].index).toEqual(1);
+        expect(nonCompletedTask[0]).toEqual(checkTaskTwo);
+    });
 });

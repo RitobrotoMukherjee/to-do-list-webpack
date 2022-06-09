@@ -15,6 +15,6 @@ export default class extends TaskList {
   completedMultipleTasks() {
     const tasks = this.tasks.filter(({ completed }) => !completed);
     super.reOrderTaskIndex(tasks);
-    return this.tasks;
+    return tasks;
   }
 }
