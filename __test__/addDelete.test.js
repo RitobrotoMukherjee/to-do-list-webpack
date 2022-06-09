@@ -34,10 +34,10 @@ describe('add and delete 1-1 to-do item', () => {
     test('To-Do Delete 1 task', () => {
         // Arrange
         const previousTasksCount = c.tasks.length;
-        console.log(c.tasks);
+        
         // Act
         const afterRemoveTasksArray = c.removeTask(0);
-        console.log(afterRemoveTasksArray);
+
         // Assert
         expect(previousTasksCount).toBe(afterRemoveTasksArray.length + 1);
     });
